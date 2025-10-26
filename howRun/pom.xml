@@ -16,7 +16,6 @@
 	<description>Parent POM for howRun project</description>
 	<modules>
 		<module>howRunSpringboot</module>
-		<module>howRunSpringbootDemo</module>
 	</modules>
 	<url/>
 	<licenses>
