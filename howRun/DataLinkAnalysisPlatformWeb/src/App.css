@@ -1,0 +1,105 @@
+/* 全局样式 */
+.ant-layout {
+    min-height: 100vh;
+}
+
+.ant-layout-sider {
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.ant-layout-header {
+    padding: 0 24px;
+    height: 64px;
+    line-height: 64px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 流程画布样式 */
+.react-flow__node {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.react-flow__node:hover {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.react-flow__edge-path {
+    stroke-width: 2;
+    stroke: #d9d9d9;
+}
+
+.react-flow__edge.animated path {
+    stroke-dasharray: 5;
+    animation: dashdraw 0.5s linear infinite;
+    stroke: #1890ff;
+}
+
+@keyframes dashdraw {
+    from {
+        stroke-dashoffset: 10;
+    }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 节点状态指示器 */
+.node-status-indicator {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.node-status-success {
+    background-color: #52c41a;
+}
+
+.node-status-error {
+    background-color: #ff4d4f;
+}
+
+.node-status-processing {
+    background-color: #1890ff;
+}
+
+.node-status-warning {
+    background-color: #faad14;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .ant-layout-sider {
+        display: none;
+    }
+
+    .ant-layout-content {
+        margin: 0 !important;
+    }
+
+    .ant-card {
+        margin-bottom: 16px;
+    }
+}
